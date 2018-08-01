@@ -191,9 +191,27 @@ body {
      width:80%;
   }
 }
-/* 
-span{
- font-style: italic;
- text-decoration-color: red;
+ 
+span#rating{
+
+  display: inline-block;
+  font-size: medium;
+  float: right;
+  position: relative;
+  margin-top: 8px;
+  margin-right: 50px;
   
-} */
+} 
+
+input.checkbox1 {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px 0 0;
+  padding: 0;
+  width: 22px;
+  height: 22px;
+  /* background: url(grey.png) no-repeat; */
+  border: none;
+  cursor: pointer;
+}
+

@@ -18,7 +18,7 @@
 		<!-- Mobile Specific Meta -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- BASE CSS -->
+       <!-- BASE CSS -->
     	<link href="css/animate.min.css" rel="stylesheet">
     	<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/fontawesome-all.css">
@@ -178,6 +178,8 @@ header {
 						</nav>
 
 					<?php }?>
+				<!-- /main nav -->
+
 			</div>
 
 		</header>
@@ -192,7 +194,7 @@ header {
 		<div class="sticky"></div>
 
 		<!-- Contact section -->
-			<section id="contact" >
+			<section id="getaquote" class="form1">
 				<div class="container">
 					<div class="row">
 
@@ -203,15 +205,14 @@ header {
 							<p> Get Started With Us Today<br></p>
 						</div>
 
-                        <main>
-                    		<div id="form_container">
+                        <main >
+                    		<div id="form_container" >
                     			<div class="row">
                     				<div class="col-lg-5">
                     					<div id="left_form">
                     						<figure style="margin-top: -40px"><img src="img/registration_bg.svg" alt=""></figure>
-                    						<h1 style="font-family: Montserrat; color: #ffffff">REQUEST <br>A <br>QUOTE</h1>
-                    						<strong><p style="color: #baefee; font-family: Montserrat">Simply fill in the questionnaire! <br> Because we know your time is precious we've kept it short and precise.</p></strong><br>
-                    						<strong><p style="font-family: Montserrat; font-size: 17px; margin-top: -15px; margin-buttom: 50px">It will only take a minute or two!</p></strong>
+                    						<h1 style="font-family: Montserrat; color: #ffffff">INSTANT <br>QUOTE</h1>
+                    						<strong><p style="font-family: Montserrat; font-size: 17px; margin-top: 130px; margin-buttom: 20px">Get an instant quote!</p></strong>
                     					</div>
                     				</div>
                     				<div class="col-lg-7">
@@ -221,77 +222,32 @@ header {
                     							<div id="progressbar"></div>
                     						</div>
                     						<!-- /top-wizard -->
-                    						<form name="example-1" id="wrapped" method="POST">
+                    						<form name="example-1" id="wrapped" method="POST" class="example1">
                     							<input id="website" name="website" type="text" value="">
                     							<!-- Leave for security protection, read docs for details -->
                     							<div id="middle-wizard">
 
-                                                    <div class="step" style="margin-top: -40px">
-                    									<h4 class="main_question" style="color: #800080; font-size: 24px"><strong>Tell us about your business</strong></h4><br>
-                                                        <div class="row">
-                    										<div class="col-md-6">
-                    											<label>Business name</label><div class="form-group">
-                    												<input type="text" name="bizname" class="form-control required" placeholder="E.g: MyBusiness LTD...">
-                    											</div>
-                    										</div>
-                    										<div class="col-md-6">
-                    											<label>Product/Service Line</label><div class="form-group">
-                    												<input type="text" name="product" class="form-control required" placeholder="E.g: Consultancy...">
-                    											</div>
-                    										</div>
-                    									</div>
-                    									<!-- /row -->
-                                                        <div class="row">
-                    										<div class="col-md-12">
-                    											<label>Your target customer(s)</label><div class="form-group">
-                    												<input type="text" name="target" class="form-control required" placeholder="E.g: Business owners, Churches...">
-                    											</div>
-                    										</div>
-                    									</div>
-                    									<!-- /row -->
-                                                        <div class="row">
-                    										<div class="col-md-6">
-                                                                <label>Do you have your business logo designed?</label><div class="form-group">
-                                                                    <select name="logo_decision" class="form-control required">
-																				<option value="" selected>Y/N</option>
-																				<option value="yes">Yes</option>
-                                                                              <option value="no">No</option>
-                                                                          </select>
-                                                                </div>
-                    										</div>
-                    										<div class="col-md-6">
-                    											<label>Your current website address if you have</label><div class="form-group">
-                    												<input type="text" name="product" class="form-control">
-                    											</div>
-                    										</div>
-                    									</div>
-                    									<!-- /row -->
 
-                    									<!-- /row -->
-                    								</div>
-                    								<!-- /step -->
                                                     <div class="step" style="margin-top: -40px">
                     									<h4 class="main_question" style="color: #800080; font-size: 24px"><strong>What is your time frame and budget?</strong></h4><br>
                                                         <div class="row">
                     										<div class="col-md-6">
                     											<label>Your budget</label><div class="form-group">
-                    												<select name="budget_decision" class="form-control required">
-																			<option value="" selected>Select</option>
-																			  <option value="30,000-50,000">N30,000 - N50,000</option>
-                                                                              <option value="50,000-100,000">N50,000 - N100,000</option>
-                                                                              <option value="100,000-250,000">N100,000 - N250,000</option>
-                                                                              <optionb value="250,000 and above">N250,000 and above</option>
+                    												<select name="budget_decision" id="budget_decision" class="form-control required"><option value="" selected>Select</option>
+                                                                        <option value="N30,000 - N50,000">N30,000 - N50,000</option>
+                                                                              <option value="N50,000 - N100,000">N50,000 - N100,000</option>
+                                                                              <option value="N100,000 - N250,000">N100,000 - N250,000</option>
+                                                                              <option value="N250,000 and above">N250,000 and above</option>
                                                                           </select>
                     											</div>
                     										</div>
                     										<div class="col-md-6">
                     											<label>Development time frame</label><div class="form-group">
-                                                                    <select name="timeframe_decision" class="form-control required">
-																			 <option value="" selected>Select</option>
-																			  <option value="2 to 4">2 to 4 weeks</option>
-                                                                              <option value="4 to 8">4 to 8 weeks</option>
-                                                                              <option value="8 to 12">8 to 12 weeks</option>
-                                                                              <option value="3 to 6">3 to 6 months</option>
+                                                                    <select name="timeframe_decision" id="timeframe_decision" class="form-control required"><option value="" selected>Select</option>
+                                                                        <option value="2 to 4 weeks">2 to 4 weeks</option>
+                                                                              <option value="4 to 8 weeks">4 to 8 weeks</option>
+                                                                              <option value="3 to 6 months">3 to 6 months</option>
+                                                                              <option value="6 months and more">6 months and more</option>
                                                                           </select>
                     											</div>
                     										</div>
@@ -300,21 +256,21 @@ header {
                                                         <div class="row">
                     										<div class="col-md-6">
                     											<label>How many pages will your website have?</label><div class="form-group">
-                    												<select name="pages_decision" class="form-control required">
-																			<option value="" selected>Select</option>
-																			<option value="4 to 6pages">4 to 6 pages</option>
-                                                                              <option value="6 to 8pages">6 to 8 pages</option>
-                                                                              <option value="8 to 12pages">8 to 12 pages</option>
-                                                                              <option value="12pages and above">12 pages and above</option>
+                    												<select name="pages_decision" id="pages_decision" class="form-control required">
+																	<option value="" selected>Select</option>
+                                                                        <option value="4 to 6 pages">4 to 6 pages</option>
+                                                                              <option value="6 to 8 pages">6 to 8 pages</option>
+                                                                              <option value="8 to 12 pages">8 to 12 pages</option>
+                                                                              <option value="12 pages and above">12 pages and above</option>
                                                                           </select>
                     											</div>
                     										</div>
                                                             <div class="col-md-6">
-                    											<label>Do you want us to register your domain name for you?</label><div class="form-group">
-                    												<select name="domain_decision" class="form-control required">
-																			<option value="" selected>Y/N</option>
-																			<option value="yes">Yes</option>
-                                                                              <option value="no">No</option>
+                    											<label>Do you have brochures, CDs, pictures, video and/or flyers for your business?</label><div class="form-group">
+                    												<select name="brochures_decision" id="brochures_decision" class="form-control required">
+																	<option value="" selected>Select</option>
+                                                                        <option value="Yes">Yes</option>
+                                                                              <option value="No">No</option>
                                                                           </select>
                     											</div>
                     										</div>
@@ -322,15 +278,10 @@ header {
                     									<!-- /row -->
                                                         <div class="row">
                                                             <div class="col-md-6">
-                    											<label>Choose your web hosting plan</label><div class="form-group">
-                                                                    <select name="hosting_decision" class="form-control required">
-																			<option value="" selected>Select</option>
-																			<option value="SS for 1yr">Shared server for 1 year</option>
-                                                                              <option value="SS for 2yrs">Shared server for 2 years</option>
-                                                                              <option value="SS for more then 2yrs">Shared server for more than 2 years</option>
-                                                                              <option value="DD for 1yr">Dedicated server for 1 year</option>
-                                                                            	<option value="DD for 2yrs">Dedicated server for 2 years</option>
-                                                                                <option value="DD for more than 2yrs">Dedicated server for more than 2 years</option>
+                    											<label>Do you want us to write your website content?</label><div class="form-group">
+                                                                    <select name="webcontent_decision" id="webcontent_decision" class="form-control required"><option value="" selected>Select</option>
+                                                                              <option value="Yes">Yes</option>
+                                                                              <option value="No">No</option>
                                                                           </select>
                     											</div>
                     										</div>
@@ -340,157 +291,70 @@ header {
                                                     </div>
                                                     <!-- /step -->
 
-
-                                                                    <div class="step" style="margin-top: -40px">
-                                    									<h4 class="main_question" style="color: #800080; font-size: 24px"><strong>What is the purpose of your potential website? </strong></h4><br>
-                                    									<div class="row">
-                                    										<div class="col-md-6">
-                                    											<div class="form-group radio_input">
-                                    												<label><input type="checkbox" value="bring new client" name="question_2[]" id="new_client" class="icheck required">Bring in New Clients</label>
-                                    											</div>
-                                    											<div class="form-group radio_input">
-                                    												<label><input type="checkbox" value="E-Commerce" name="question_2[]" id="e_commerce" class="icheck required">E-Commerce</label>
-                                    											</div>
-                                    											<div class="form-group radio_input">
-                                    												<label><input type="checkbox" value="Educational/Training" name="question_2[]" id="edu/training" class="icheck required">Educational/Training</label>
-                                    											</div>
-                                                                                <div class="form-group radio_input">
-                                    												<label><input type="checkbox" value="Enterainment" name="question_2[]" id="entertainment" class="icheck required">Entertainment</label>
-                                    											</div>
-                                                                                <div class="form-group radio_input">
-                                    												<label><input type="checkbox" value="Blog" name="question_2[]" id="blog" class="icheck required">Blog</label>
-                                    											</div>
-                                    										</div>
-                                    										<div class="col-md-6">
-                                    											<div class="form-group radio_input">
-                                    												<label><input type="checkbox" value="extend marketing reach" id="marketing reach" name="question_2[]" class="icheck required">Extend Marketing Reach</label>
-                                    											</div>
-                                    											<div class="form-group radio_input">
-                                    												<label><input type="checkbox" value="information" id="information" name="question_2[]" class="icheck required">To offer information </label>
-                                    											</div>
-                                    											<div class="form-group radio_input">
-                                    												<label><input type="checkbox" value="online presence" id="online_presence" name="question_2[]" class="icheck required">Online Presence</label>
-                                    											</div>
-                                                                                <div class="form-group radio_input">
-                                    												<label><input type="checkbox" value="service-based" id="service_based" name="question_2[]" class="icheck required">Service-based</label>
-                                    											</div>
-                                                                                <div class="form-group radio_input">
-                                    												<label><input type="checkbox" value="advertisement" id="advert" name="question_2[]" class="icheck required">Advertisement</label>
-                                    											</div>
-                                    										</div>
-                                    									</div>
-                                    									<!-- /row -->
-                                                                        <div class="row">
-                                                                             <div class="col-md-12">
-                                                                                 <label>Other reasons? Please explain below</label><div class="form-group">
-                                                                                     <textarea class="form-control"  style="height: 30px" name="target" id="other_reasons"></textarea>
-                                                                                 </div>
-                                                                             </div>
-                                                                         </div>
-                                                                             <!-- /row -->
-                                    								</div>
-                                    								<!-- /step -->
-
-                                                    <div class="step" style="margin-top: -40px">
+                                                    <div class="submit step" style="margin-top: -40px">
                                                         <h4 class="main_question" style="color: #800080; font-size: 24px"><strong>Which dynamic functions do you need?</strong></h4><br>
                                                         <div class="row">
                                                             <div class="col-md-6">
                                                                 <div class="form-group radio_input">
-                                                                    <label><input type="checkbox" value="Professional" name="question_3[]" class="icheck required">Content management</label>
+                                                                    <label><input type="checkbox" value="content_management" name="question_3[]" class="icheck required">Content management</label>
                                                                 </div>
                                                                 <div class="form-group radio_input">
-                                                                    <label><input type="checkbox" value="Graduated" name="question_3[]" class="icheck required">Online store</label>
+                                                                    <label><input type="checkbox" value="e_commerce" name="question_3[]" class="icheck required">E-Commerce</label>
                                                                 </div>
                                                                 <div class="form-group radio_input">
-                                                                    <label><input type="checkbox" value="Not graduated" name="question_3[]" class="icheck required">Online forum</label>
+                                                                    <label><input type="checkbox" value="online forum" name="question_3[]" class="icheck required">Online forum</label>
                                                                 </div>
                                                                 <div class="form-group radio_input">
-                                                                    <label><input type="checkbox" value="Emphatic" name="question_3[]" class="icheck required">Photo gallery</label>
+                                                                    <label><input type="checkbox" value="photo gallery" name="question_3[]" class="icheck required">Photo gallery</label>
                                                                 </div>
                                                                 <div class="form-group radio_input">
-                                                                    <label><input type="checkbox" value="Motivated" name="question_3[]" class="icheck required">Automatic e-mails</label>
+                                                                    <label><input type="checkbox" value="automatic_emails" name="question_3[]" class="icheck required">Automatic e-mails</label>
                                                                 </div>
                                                                 <div class="form-group radio_input">
-                                                                    <label><input type="checkbox" value="Passionate" name="question_3[]" class="icheck required">Chat room</label>
+                                                                    <label><input type="checkbox" value="chat_room" name="question_3[]" class="icheck required">Chat room</label>
                                                                 </div>
                                                                 <div class="form-group radio_input">
-                                                                    <label><input type="checkbox" value="Passionate" name="question_3[]" class="icheck required">Registration/Booking</label>
+                                                                    <label><input type="checkbox" value="registration/booking" name="question_3[]" class="icheck required">Registration/Booking</label>
                                                                 </div>
                                                                 <div class="form-group radio_input">
-                                                                    <label><input type="checkbox" value="Passionate" name="question_3[]" class="icheck required">Others</label>
+                                                                    <label><input type="checkbox" value="static_site" name="question_3[]" class="icheck required">Static Website</label>
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <div class="form-group radio_input">
-                                                                    <label><input type="checkbox" value="Passionate" name="question_3[]" class="icheck required">Guestbook</label>
+                                                                    <label><input type="checkbox" value="guestbook" name="question_3[]" class="icheck required">Guestbook</label>
                                                                 </div>
                                                                 <div class="form-group radio_input">
-                                                                    <label><input type="checkbox" value="Passionate" name="question_3[]" class="icheck required">Password protected area</label>
+                                                                    <label><input type="checkbox" value="password_protected_area" name="question_3[]" class="icheck required">Password protected area</label>
                                                                 </div>
                                                                 <div class="form-group radio_input">
-                                                                    <label><input type="checkbox" value="Passionate" name="question_3[]" class="icheck required">Video/Audio Streaming</label>
+                                                                    <label><input type="checkbox" value="video_audio_streaming" name="question_3[]" class="icheck required">Video/Audio Streaming</label>
                                                                 </div>
                                                                 <div class="form-group radio_input">
-                                                                    <label><input type="checkbox" value="Passionate" name="question_3[]" class="icheck required">Event/Promotion page</label>
+                                                                    <label><input type="checkbox" value="event_promotion" name="question_3[]" class="icheck required">Event/Promotion page</label>
                                                                 </div>
                                                                 <div class="form-group radio_input">
-                                                                    <label><input type="checkbox" value="Passionate" name="question_3[]" class="icheck required">Tracking system</label>
+                                                                    <label><input type="checkbox" value="tracking_system" name="question_3[]" class="icheck required">Tracking system</label>
                                                                 </div>
                                                                 <div class="form-group radio_input">
-                                                                    <label><input type="checkbox" value="Passionate" name="question_3[]" class="icheck required">News feeds (RSS)</label>
+                                                                    <label><input type="checkbox" value="news_feeds" name="question_3[]" class="icheck required">News feeds (RSS)</label>
                                                                 </div>
                                                                 <div class="form-group radio_input">
-                                                                    <label><input type="checkbox" value="Passionate" name="question_3[]" class="icheck required">E-mail newsletter</label>
+                                                                    <label><input type="checkbox" value="email_newsletter" name="question_3[]" class="icheck required">E-mail newsletter</label>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <!-- /row -->
                                                     </div>
                                                     <!-- /step -->
-                                                    <div class="submit step" style="margin-top: -40px">
-                                                        <h4 class="main_question" style="color: #800080; font-size: 24px"><strong>Elements provision and optional services</strong></h4><br>
-                    									<div class="row">
-                                                            <div class="col-md-6">
-                                                                <label>Will you supply photos for scanning?</label><div class="form-group">
-                                                                    <select name="photo_decision" class="form-control required">
-																			<option value="" selected>Y/N</option>
-																			<option value="yes">Yes</option>
-                                                                            <option value="no">No</option>
-                                                                          </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <label>Do you have brochures, CDs, video and/or flyers for your business?</label><div class="form-group">
-                                                                    <select name="brochures_decision" class="form-control required">
-																			<option value="" selected>Y/N</option>
-																			<option value="yes">Yes</option>
-                                                                            <option value="no">No</option>
-                                                                          </select>
-                                                                </div>
-                                                            </div>
-                    									</div>
-                    									<!-- /row -->
+                                                    
 
-                    									<div class="row">
-                                                            <div class="col-md-6">
-                                                                <label>Do you want us to write your website content?</label><div class="form-group">
-                                                                    <select name="webcontent_decision" class="form-control required">
-																			<option value="" selected>Y/N</option>
-																			<option value="yes">Yes</option>
-                                                                            <option value="no">No</option>
-                                                                          </select>
-                                                                </div>
-                                                            </div>
-                    									</div>
-                    									<!-- /row -->
-                    								</div>
-                    								<!-- /step-->
                     							</div>
                     							<!-- /middle-wizard -->
                     							<div id="bottom-wizard">
                     								<button type="button" name="backward" class="backward">Previous</button>
                     								<button type="button" name="forward" class="forward">Next</button>
-                    								<button type="submit" name="process" class="submit">Submit</button>
+                    								<button type="submit" name="process" id="btnsubmit" class="submit">Submit</button>
                     							</div>
                     							<!-- /bottom-wizard -->
                     						</form>
@@ -498,13 +362,19 @@ header {
                     					<!-- /Wizard container -->
                     				</div>
                     			</div><!-- /Row -->
-                    		</div><!-- /Form_container -->
+							</div><!-- /Form_container -->
+							
                     	</main>
+
+						
 
 					</div>
 				</div>
 			</section>
 			<!-- end Contact section -->
+			<!-- second tab -->
+			<?php include("checkoutpage.php"); ?>
+			
 
 		<footer id="footer">
 			<div class="container">
@@ -621,6 +491,9 @@ header {
 		
 		<script src="js/login.js"></script>
 		<script src="js/signup.js"></script>
+		<script src="js/form_handler.js"></script>
+		<script src="js/checkout.js"></script>
+		
 
 
 

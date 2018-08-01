@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    $('.form2').hide();
 $('#loginform').validate({
     rules: {
         email : {

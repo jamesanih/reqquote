@@ -18,6 +18,7 @@
            // $name = str_replace(' ',' ' ,$row['name']);
             $_SESSION['name'] = $row['name'];
             $_SESSION['email'] = $row['email'];
+            $_SESSION['id'] = $row['id'];
            // print $name;
            echo "OK";
        }else {

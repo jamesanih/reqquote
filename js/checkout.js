@@ -2,11 +2,11 @@
 	jQuery(function ($) {
 		"use strict";
 		//$('form#wrapped').attr('action', 'questionare_send.php');
-		$("#wizard_container").wizard({
-			stepsWrapper: "#wrapped",
+		$("#wizard_container2").wizard({
+			stepsWrapper: "#wrapped2",
 			submit: ".submit",
 			beforeSelect: function (event, state) {
-				if ($('input#website').val().length != 0) {
+				if ($('input#website2').val().length != 0) {
 					return false;
 				} else if ($('input#website2').val().length != 0) {
 					return false;
@@ -26,17 +26,17 @@
 			}
 		});
 		//  progress bar
-		$("#progressbar").progressbar();
-		$("#wizard_container").wizard({
+		$("#progressbar2").progressbar();
+		$("#wizard_container2").wizard({
 			afterSelect: function (event, state) {
-				$("#progressbar").progressbar("value", state.percentComplete);
+				$("#progressbar2").progressbar("value", state.percentComplete);
 				$("#location").text("(" + state.stepsComplete + "/" + state.stepsPossible + ")");
 			}
 		});
 		/* Submit loader mask */
 		$('form').on('submit',function(e) {
 			e.preventDefault();
-			var form = $("form#wrapped");
+			var form = $("form#wrapped2");
 			var data = $(this).serialize();
 			// var dat = form.validate();
 			// var dd = form.valid();
@@ -46,23 +46,23 @@
 			if (form.valid()) {
 				$("#loader_form").fadeIn();
 				
-			//console.log(data);
-			$.ajax({
-				type: 'POST',
-				url: 'response',
-				data: data,
-				success: function(response){
-					if(response == "inserted") {
-						$(".form1").remove();
-						$('.form2').show();
-						// $('.example1').attr('id', 'wrapped2');
+			// //console.log(data);
+			// $.ajax({
+			// 	type: 'POST',
+			// 	url: 'response',
+			// 	data: data,
+			// 	success: function(response){
+			// 		if(response == "inserted") {
+			// 			// $(".form1").remove();
+			// 			// $('.form2').show();
+			// 			// $('.example1').attr('id', 'wrapped2');
 
-					} else if(response == "not inserted"){
+			// 		} else if(response == "not inserted"){
 
-					}
+			// 		}
 	
-				}
-			});
+			// 	}
+			// });
 
 			}else{
 				console.log('not true');
