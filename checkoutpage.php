@@ -37,44 +37,48 @@
                     									<h4 class="main_question" style="color: #800080; font-size: 24px"><strong>What is your time frame and budget?</strong></h4><br>
                                                        <div class="row" >
 														   <div class="col-md-12">
-														   <div class="form-group clearfix" id="features">
-																<label class="rating_type">Simple Plan</label>
-																<input type="hidden" value="50000" id="price">
-																<span class="rating" id="rating"><label for="">&#8358;50,000</label></span>
-															</div>
+																<div class="form-group clearfix" id="features">
+																		<label class="rating_type">Simple Plan</label>
+																		<input type="hidden" value="50000" id="price" class="newfeature">
+																		<span class="rating" id="rating"><label for="">&#8358;50,000</label></span>
+																	</div>
+																	
+																	
+																	<div class="form-group clearfx">
+																		<label for="total" class="rating_type">Total</label>
+																		<span class="rating" id="rating">&#8358;<label for="" id="total"></label></span>
+																		<!-- <input type="text" class="rating" id="rating" value="&#8358;0.00" readonly> -->
+																	</div>
+															</div>					
+														</div>										
 
-															
 
 															<div>
-																<label  for="">Add more features</label>
-																<div class="row">
-																	<div class="col-md-6">
-																		<div class="form-group radio_input">
-																			<label><input type="checkbox" class="checkbox1" id="chb1" value="Logo design" name="more_features[]" >Logo design</label>
+																<label for="">Add more features</label>
+																	<div class="row">
+																		<div class="col-md-6">
+																			<div class="form-group radio_input">
+																				<label><input type="checkbox" class="checkbox1" id="chb1" data-price="500" value="Logo design" name="more_features[]" >Logo design</label>
+																			</div>
+																			<div class="form-group radio_input">
+																				<label><input type="checkbox" class="checkbox1" id="chb2" data-price="120" value="Dashboard design" name="more_features[]" >Dashboard design</label>
+																			</div>
 																		</div>
+
+
+																		<div class="col-md-6">
 																		<div class="form-group radio_input">
-																			<label><input type="checkbox" class="checkbox1" value="Dashboard design" name="more_features[]" >Dashboard design</label>
+																			<label><input type="checkbox" class="checkbox1" id="chb3" value="Satisfied" name="more_features[]" >Logo design</label>
 																		</div>
+
+																	</div>
+
 																		
-																	</div>
 
-																	<div class="col-md-6">
-																		<div class="form-group radio_input">
-																			<label><input type="checkbox" class="checkbox1" value="Satisfied" name="more_features[]" >Logo design</label>
-																		</div>
-
-																	</div>
-																</div>
-
-															</div>
-
-														   </div>
-													   	
-													   </div>
-                    									<!-- /row -->
-                                                       
-
-                                                        
+																	</div>  <!-- row -->
+															
+															</div> <!-- div -->
+															                    
 
                                                     </div>
                                                     <!-- /step -->
