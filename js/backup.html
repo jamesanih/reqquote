@@ -1,0 +1,120 @@
+$(document).ready(function() {
+    var htmltag = '<div class="form-group clearfix" id="logodes"><label class="rating_type">Logo Design</label><input type="hidden" name="logos" value="50000" class="newfeatures" id="logo"><span class="rating" id="rating"><label for="">&#8358;50,000</label></span> </div>';
+     var chb2 = '<div class="form-group clearfix" id="dashboards"><label class="rating_type">Dashboard Design</label><input type="hidden" name="dashboard" value="120000" class="newfeatures" id="dash"><span class="rating" id="rating"><label for="">&#8358;120,000</label></span> </div>';
+    var logoDesignHtml = '<div class="form-group clearfix" id="design_logo"><label class="rating_type">Dashboard Design</label><input type="hidden" name="logo_designs" value="160000" class="newfeatures" id="logo_design"><span class="rating" id="rating"><label for="">&#8358;160,000</label></span> </div>';
+
+    $('.checkbox1').click(function(){
+        if(this.checked){
+            $("#chb1").click(function(){
+                if(this.checked) {
+                   
+                    if($('#dashboards').length && $('#design_logo').length){
+                        $(htmltag).insertAfter("#dashboards");
+                        var logoprice = parseInt($('#logo').val());
+                        var dashprice = parseInt($('#dash').val());
+                        var dash_logo = parseInt($('#logo_design').val());
+                        var initaltotal = parseInt($('#total').val());
+                        var total = logoprice + initaltotal + dashprice + dash_logo;
+                        $("#finalprice").text(total);
+                        $('#total').val(total);
+        
+                    }else if($('#dashboards').length){
+                     $(htmltag).insertAfter("#dashboards");
+                     var logoprice = parseInt($('#logo').val());
+                     var dashprice = parseInt($('#dash').val());
+                     var initaltotal = parseInt($('#total').val());
+                     var total = logoprice + initaltotal + dashprice;
+                     $("#finalprice").text(total);
+                     $('#total').val(total);
+                    }else if($('#design_logo').length){
+                     $(htmltag).insertAfter("#design_logo");
+                     var logoprice = parseInt($('#logo').val());
+                     var dash_logo = parseInt($('#logo_design').val());
+                     var initaltotal = parseInt($('#total').val());
+                     var total = logoprice + initaltotal + dash_logo;
+                     $("#finalprice").text(total);
+                     $('#total').val(total);
+                    }else{
+                     $(htmltag).insertAfter("#features2");
+                     var logoprice = parseInt($('#logo').val());
+                     var initaltotal = parseInt($('#total').val());
+                     var total = logoprice + initaltotal;
+                     $("#finalprice").text(total);
+                     $('#total').val(total);
+                    
+                    }
+                }else {
+                    $('#logodes').remove();
+                    if($('#dashboards').length && $('#design_logo').length){
+                        var dashprice = parseInt($('#dash').val());
+                        var designlogo_price = parseInt($('#logo_design').val());
+                        var initaltotal = parseInt($('#total').val());
+                        var total = dashprice + initaltotal + designlogo_price;
+                        $("#finalprice").text(total);
+                        $('#total').val(total);
+                    }else if($('#dashboards').length){
+                        var dashprice = parseInt($('#dash').val());
+                        var initaltotal = parseInt($('#total').val());
+                        var total = dashprice + initaltotal;
+                        $("#finalprice").text(total);
+                        $('#total').val(total);
+                    }else if($('#design_logo').length){
+                        var dash_logo = parseInt($('#logo_design').val());
+                        var initaltotal = parseInt($('#total').val());
+                        var total = initaltotal + dash_logo;
+                        $("#finalprice").text(total);
+                        $('#total').val(total);
+        
+                    }else{
+                        $('#total').val('0');
+                        var initaltotal = $('#total').val();
+                        $('#finalprice').text(initaltotal);
+                        $('#total').val(initaltotal);
+                    }
+                }
+            })
+        }
+    })
+
+    
+    
+ 
+    //dashboard
+    $('#chb2').click(function(){
+        if(this.checked){
+            
+            if($('#logodes').length){
+             $(chb2).insertAfter("#logodes");
+            }else if($('#design_logo').length) {
+             $(chb2).insertAfter("#design_logo");
+            }else{
+             $(chb2).insertAfter("#features2");
+             var dashprice = parseInt($('#dash').val());
+             var currenttotal = parseInt($('#total').val());
+             var total = dashprice + currenttotal;
+             $("#finalprice").text(total);
+             $('#total').val(total);
+            }
+        }
+    })
+ 
+    $('#chb3').click(function(){
+     if(this.checked){
+         
+         if($('#logodes').length){
+          $(logoDesignHtml).insertAfter("#logodes");
+         }else if($('#dashboards').length) {
+          $(logoDesignHtml).insertAfter("#dashbaords");
+         }else{
+          $(logoDesignHtml).insertAfter("#features2");
+          var logo_design_price = parseInt($('#logo_design').val());
+          var currenttotal = parseInt($('#total').val());
+          var total = logo_design_price + currenttotal;
+          $("#finalprice").text(total);
+          $('#total').val(total);
+         }
+     }
+ })
+  
+    
+});

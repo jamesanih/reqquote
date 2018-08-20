@@ -492,6 +492,7 @@ header {
 		<script src="js/login.js"></script>
 		<script src="js/signup.js"></script>
 		<script src="js/form_handler.js"></script>
+		<script src="js/cancel_handler.js"></script>
 		<script src="js/checkout.js"></script>
 		
 
